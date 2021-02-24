@@ -1,0 +1,46 @@
+{
+  "name": "cacheweave",
+  "version": "1.0.0",
+  "main": "lib/speedweave.js",
+  "author": {
+    "name": "Cedrik Boudreau",
+    "email": "cedrik.git@tryninja.io",
+    "website": "https://community.xyz"
+  },
+  "repository": "https://github.com/cedriking/cacheweave.git",
+  "license": "MIT",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "start": "ts-node src/speedweave.ts",
+    "build": "yarn buildjs && yarn pkg && yarn copy",
+    "copy": "copyfiles --flat lib/trusted.txt dist",
+    "buildjs": "esbuild src/speedweave.ts --platform=node --bundle --outfile=lib/speedweave.js",
+    "pkg": "pkg lib/speedweave.js --out-path=dist",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "@supercharge/promise-pool": "^1.6.0",
+    "@types/minimist": "^1.2.1",
+    "@types/node": "^14.14.31",
+    "ar-gql": "^0.0.3",
+    "arweave": "^1.10.11",
+    "chalk": "^4.1.0",
+    "minimist": "^1.2.5",
+    "ora": "^5.3.0",
+    "prettier": "^2.2.1",
+    "smartweave": "^0.4.27",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@luckycatfactory/esbuild-graphql-loader": "^3.1.1",
+    "copyfiles": "^2.4.1",
+    "esbuild": "^0.8.51",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "pkg": "^4.4.9"
+  }
+}
