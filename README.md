@@ -5,7 +5,7 @@ speedweave was created to cache SmartWeave contract states, storing them into th
 
 The depoyed state has the following setup:
 ```
-data: It's the updated state
+data: The updated state
 tags:
   App-Name: speedweave
   Contract-Id: contractTxId
