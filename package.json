@@ -1,5 +1,5 @@
 {
-  "name": "cacheweave",
+  "name": "speedweave",
   "version": "1.0.2",
   "main": "lib/speedweave.js",
   "author": {
@@ -7,7 +7,7 @@
     "email": "cedrik.git@tryninja.io",
     "website": "https://community.xyz"
   },
-  "repository": "https://github.com/cedriking/cacheweave.git",
+  "repository": "https://github.com/cedriking/speedweave.git",
   "license": "MIT",
   "files": [
     "lib/**/*"
