@@ -1,20 +1,23 @@
 export interface IUpdates {
   height: number;
-  contracts: Map<string, {
-    id: string,
-    txid: string,
-    height: number
-  }>;
+  contracts: Map<
+    string,
+    {
+      id: string;
+      txid: string;
+      height: number;
+    }
+  >;
 }
 
 export interface IUpdatesFile {
-  height: number,
+  height: number;
   contracts: {
-    name: string,
+    name: string;
     value: {
-      id: string,
-      txid: string,
-      height: number
-    }
-  }[]
+      id: string;
+      txid: string;
+      height: number;
+    };
+  }[];
 }
